@@ -66,31 +66,45 @@ function Index() {
     <div className="min-h-screen bg-paper text-ink">
       <SiteHeader />
 
-      {/* Hero */}
-      <section className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-        <div className="max-w-[48ch]">
-          <h1 className="mb-8 font-serif text-5xl font-medium leading-[1.05] text-balance lg:text-7xl">
-            We don't sell technology. We run the Operator's Audit.
+      {/* Hero — editorial masthead */}
+      <section className="mx-auto max-w-4xl px-6 py-20 lg:py-28">
+        {/* Masthead / dateline */}
+        <div className="mb-16 lg:mb-20">
+          <div className="h-px w-full bg-ink/10" />
+          <div className="flex flex-wrap items-center justify-between gap-y-2 gap-x-6 py-3 font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-ink/60">
+            <span>Vol. 02 — No. 4</span>
+            <span className="text-tobacco">Published in Tampa, Florida</span>
+            <span>The Operator's Audit</span>
+          </div>
+          <div className="h-px w-full bg-ink/10" />
+        </div>
+
+        {/* Content */}
+        <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
+          <h1 className="mb-8 font-serif text-4xl font-normal leading-[1.1] text-balance md:text-5xl lg:text-6xl">
+            Technology is an operational liability until it is audited.
           </h1>
-          <p className="mb-12 text-lg leading-relaxed text-ink/70 text-pretty lg:text-xl">
-            Catalytix runs a structured on-site assessment for multi-location operators in
-            healthcare, cannabis, hospitality, fuel, and retail. We find the operational gaps your
-            carriers and your IT guy don't — then architect what fixes them.
+          <p className="mb-10 text-lg leading-relaxed text-ink/70 text-pretty md:text-xl">
+            Catalytix provides a structured assessment for multi-location operators. We find the
+            gaps your carriers and IT providers miss, then architect the solutions that resolve
+            them.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col items-center gap-5 sm:flex-row sm:gap-6">
             <PrimaryCTA>Schedule the Operator's Audit</PrimaryCTA>
             <PrimaryCTA variant="ghost" to="/audit">
               How the Audit works
             </PrimaryCTA>
           </div>
         </div>
-        <div className="mt-20">
+
+        {/* Quiet line drawing reference */}
+        <div className="mt-24 opacity-30">
           <img
             src={storefronts}
             alt="Line-drawn sequence of operator storefronts: gas station, dental clinic, veterinary practice, cannabis dispensary, urgent care, and hotel."
             width={1920}
             height={640}
-            className="w-full rounded-md border border-rule bg-ink/[0.02] object-cover"
+            className="w-full object-contain grayscale"
           />
         </div>
       </section>
