@@ -3,30 +3,27 @@ import { verticals } from "@/data/verticals";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-ink text-paper/40">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
+    <footer className="border-t border-rule bg-surface text-ink/70">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div className="max-w-[42ch]">
-          <Link to="/" className="mb-4 block font-serif text-xl italic text-paper">
-            Catalytix
+          <Link to="/" className="mb-3 block text-lg font-semibold text-ink">
+            Catalytix<span className="text-tobacco">.</span>
           </Link>
-          <p className="text-xs leading-relaxed">
-            Authorized advisor of Intelisys, a ScanSource company. Suppliers pay us residual; clients
-            pay us nothing. We negotiate against the supplier on the client's behalf. We are not
-            employed by any supplier.
+          <p className="text-sm leading-relaxed">
+            A technology advisory firm helping multi-location operators design,
+            source, and run modern IT. Authorized advisor of Intelisys, a
+            ScanSource company — with access to 200+ vetted suppliers across
+            UCaaS, CCaaS, SD-WAN, SASE, security, and cloud.
           </p>
         </div>
         <div>
-          <div className="mb-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-paper/60">
-            Verticals
+          <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-ink">
+            Industries
           </div>
-          <ul className="space-y-3 text-xs">
+          <ul className="space-y-2 text-sm">
             {verticals.slice(0, 4).map((v) => (
               <li key={v.slug}>
-                <Link
-                  to="/verticals/$slug"
-                  params={{ slug: v.slug }}
-                  className="hover:text-paper"
-                >
+                <Link to="/verticals/$slug" params={{ slug: v.slug }} className="hover:text-ink">
                   {v.shortName}
                 </Link>
               </li>
@@ -34,17 +31,13 @@ export function SiteFooter() {
           </ul>
         </div>
         <div>
-          <div className="mb-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-paper/60">
-            More verticals
+          <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-ink">
+            More
           </div>
-          <ul className="space-y-3 text-xs">
+          <ul className="space-y-2 text-sm">
             {verticals.slice(4).map((v) => (
               <li key={v.slug}>
-                <Link
-                  to="/verticals/$slug"
-                  params={{ slug: v.slug }}
-                  className="hover:text-paper"
-                >
+                <Link to="/verticals/$slug" params={{ slug: v.slug }} className="hover:text-ink">
                   {v.shortName}
                 </Link>
               </li>
@@ -52,37 +45,21 @@ export function SiteFooter() {
           </ul>
         </div>
         <div>
-          <div className="mb-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-paper/60">
+          <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-ink">
             Firm
           </div>
-          <ul className="space-y-3 text-xs">
-            <li>
-              <Link to="/audit" className="hover:text-paper">
-                The Operator's Audit
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="hover:text-paper">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/insights" className="hover:text-paper">
-                Insights
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:text-paper">
-                Schedule the Audit
-              </Link>
-            </li>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/audit" className="hover:text-ink">Services</Link></li>
+            <li><Link to="/about" className="hover:text-ink">About</Link></li>
+            <li><Link to="/insights" className="hover:text-ink">Insights</Link></li>
+            <li><Link to="/contact" className="hover:text-ink">Contact</Link></li>
           </ul>
         </div>
       </div>
-      <div className="border-t border-paper/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 text-[10px] uppercase tracking-widest sm:flex-row sm:items-center sm:justify-between">
+      <div className="border-t border-rule">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-ink/50 sm:flex-row sm:items-center sm:justify-between">
           <span>&copy; {new Date().getFullYear()} Catalytix Advisory</span>
-          <span>Not a broker. An operator.</span>
+          <span>Authorized Advisor of Intelisys, a ScanSource company.</span>
         </div>
       </div>
     </footer>
