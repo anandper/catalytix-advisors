@@ -88,7 +88,7 @@ function VerticalPage() {
             Patterns we see on the floor.
           </h2>
           <ol className="divide-y divide-rule border-y border-rule">
-            {v.findings.map((f, i) => (
+            {v.findings.map((f: { symptom: string; detail: string }, i: number) => (
               <li key={i} className="grid gap-6 py-10 lg:grid-cols-[80px_1fr_2fr] lg:gap-12">
                 <span className="font-serif text-2xl text-tobacco">
                   {String(i + 1).padStart(2, "0")}
