@@ -102,18 +102,14 @@ function Index() {
           className="absolute inset-x-0 top-0 -z-10 h-[640px] bg-gradient-to-b from-tobacco/8 via-tobacco/3 to-transparent"
         />
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 lg:pt-28">
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-rule bg-paper px-3 py-1 text-xs font-medium text-ink/70">
-            <span className="size-1.5 rounded-full bg-tobacco" />
-            Authorized Advisor — Intelisys, a ScanSource company
-          </div>
           <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-balance md:text-5xl lg:text-6xl">
-            Modern IT, sourced and managed by an{" "}
-            <span className="text-tobacco">independent advisor</span>.
+            Modern IT, sourced and managed by{" "}
+            <span className="text-tobacco">a team that knows your operation</span>.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-ink/70 text-pretty">
-            Catalytix designs and procures the technology stack for multi-location operators —
-            voice, network, security, and cloud — across a vetted portfolio of 200+ suppliers.
-            Vendor-neutral. Outcome-aligned. Paid by the supplier, not by you.
+            Catalytix Advisors designs and procures the technology stack for multi-location
+            operators — voice, network, security, and cloud — across a vetted portfolio of 200+
+            suppliers. Vendor-neutral. Outcome-aligned. Paid by the supplier, not by you.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <PrimaryCTA className="px-6 py-3">

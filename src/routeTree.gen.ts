@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AuditRouteImport } from './routes/audit'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as VerticalsGasStationsRouteImport } from './routes/verticals.gas-stations'
 import { Route as VerticalsSlugRouteImport } from './routes/verticals.$slug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -47,6 +48,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VerticalsGasStationsRoute = VerticalsGasStationsRouteImport.update({
+  id: '/verticals/gas-stations',
+  path: '/verticals/gas-stations',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VerticalsSlugRoute = VerticalsSlugRouteImport.update({
   id: '/verticals/$slug',
   path: '/verticals/$slug',
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/insights': typeof InsightsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/verticals/$slug': typeof VerticalsSlugRoute
+  '/verticals/gas-stations': typeof VerticalsGasStationsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/insights': typeof InsightsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/verticals/$slug': typeof VerticalsSlugRoute
+  '/verticals/gas-stations': typeof VerticalsGasStationsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +88,7 @@ export interface FileRoutesById {
   '/insights': typeof InsightsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/verticals/$slug': typeof VerticalsSlugRoute
+  '/verticals/gas-stations': typeof VerticalsGasStationsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +100,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/sitemap.xml'
     | '/verticals/$slug'
+    | '/verticals/gas-stations'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/sitemap.xml'
     | '/verticals/$slug'
+    | '/verticals/gas-stations'
   id:
     | '__root__'
     | '/'
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/sitemap.xml'
     | '/verticals/$slug'
+    | '/verticals/gas-stations'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,6 +131,7 @@ export interface RootRouteChildren {
   InsightsRoute: typeof InsightsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   VerticalsSlugRoute: typeof VerticalsSlugRoute
+  VerticalsGasStationsRoute: typeof VerticalsGasStationsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -165,6 +178,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/verticals/gas-stations': {
+      id: '/verticals/gas-stations'
+      path: '/verticals/gas-stations'
+      fullPath: '/verticals/gas-stations'
+      preLoaderRoute: typeof VerticalsGasStationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/verticals/$slug': {
       id: '/verticals/$slug'
       path: '/verticals/$slug'
@@ -183,7 +203,18 @@ const rootRouteChildren: RootRouteChildren = {
   InsightsRoute: InsightsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   VerticalsSlugRoute: VerticalsSlugRoute,
+  VerticalsGasStationsRoute: VerticalsGasStationsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
