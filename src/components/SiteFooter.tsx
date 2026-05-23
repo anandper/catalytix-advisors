@@ -6,14 +6,14 @@ export function SiteFooter() {
     <footer className="border-t border-rule bg-surface text-ink/70">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div className="max-w-[42ch]">
-          <Link to="/" className="mb-3 block text-lg font-semibold text-ink">
-            Catalytix<span className="text-tobacco">.</span>
+          <Link to="/" className="mb-3 inline-flex items-baseline gap-1.5 text-lg font-semibold text-ink">
+            <span>Catalytix</span>
+            <span className="text-sm font-medium text-ink/60">Advisors</span>
           </Link>
           <p className="text-sm leading-relaxed">
-            A technology advisory firm helping multi-location operators design,
-            source, and run modern IT. Authorized advisor of Intelisys, a
-            ScanSource company — with access to 200+ vetted suppliers across
-            UCaaS, CCaaS, SD-WAN, SASE, security, and cloud.
+            A technology advisory team helping multi-location operators design,
+            source, and run modern IT — across UCaaS, CCaaS, SD-WAN, SASE,
+            security, and cloud, with a 200+ supplier portfolio behind us.
           </p>
         </div>
         <div>
@@ -59,7 +59,7 @@ export function SiteFooter() {
       <div className="border-t border-rule">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-ink/50 sm:flex-row sm:items-center sm:justify-between">
           <span>&copy; {new Date().getFullYear()} Catalytix Advisory</span>
-          <span>Authorized Advisor of Intelisys, a ScanSource company.</span>
+          <span>Catalytix Advisors LLC.</span>
         </div>
       </div>
     </footer>
