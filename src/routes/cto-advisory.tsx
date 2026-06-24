@@ -156,7 +156,7 @@ const faq = [
   },
 ];
 
-export const Route = createFileRoute("/fractional-cto")({
+export const Route = createFileRoute("/cto-advisory")({
   head: () => ({
     meta: [
       { title: "Fractional CTO & Engineering Delivery Leadership — Anand Vidyarthi" },
