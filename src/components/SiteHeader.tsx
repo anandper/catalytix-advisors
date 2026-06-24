@@ -4,6 +4,7 @@ import { PrimaryCTA } from "./PrimaryCTA";
 
 const nav = [
   { to: "/audit", label: "Services" },
+  { to: "/fractional-cto", label: "Fractional CTO" },
   { to: "/verticals/dental", label: "Industries" },
   { to: "/insights", label: "Insights" },
   { to: "/about", label: "About" },
