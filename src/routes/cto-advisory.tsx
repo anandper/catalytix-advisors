@@ -200,17 +200,21 @@ function CtoAdvisory() {
         />
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 lg:pt-28">
           <div className="mb-5 text-xs font-semibold uppercase tracking-wider text-tobacco">
-            Fractional CTO · Engineering Delivery Leader
+            CTO Advisory · Catalytix
           </div>
           <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-balance md:text-5xl lg:text-6xl">
-            Anand Vidyarthi
+            Executive engineering leadership for your{" "}
+            <span className="text-tobacco">modern IT stack</span>.
           </h1>
-          <p className="mt-4 max-w-2xl text-lg font-medium text-ink/80">
-            Fractional CTO · Interim Director of Engineering · AI Transformation Advisor · Delivery
-            Leader
+          <p className="mt-6 max-w-2xl text-lg font-medium text-ink/80">
+            CTO Advisory is the leadership layer on top of the technology we source and run.
+            We set the strategy, govern delivery, and turn UCaaS, network, security, and cloud
+            into measurable business outcomes.
           </p>
-          <p className="mt-1 text-sm text-ink/55">Placentia, CA · Available Nationwide</p>
-          <p className="mt-8 max-w-2xl text-xl font-medium text-balance">
+          <p className="mt-8 max-w-2xl text-sm font-semibold uppercase tracking-wider text-ink/55">
+            Led by Anand Vidyarthi · Placentia, CA · Available Nationwide
+          </p>
+          <p className="mt-3 max-w-2xl text-xl font-medium text-balance">
             I build and lead delivery organizations — and I'm still close enough to the work to know
             when something's wrong.
           </p>
@@ -221,6 +225,7 @@ function CtoAdvisory() {
             haven't lost the technical depth. I can go deep when it matters, which means I ask better
             questions, make faster decisions, and don't get misled by the teams I'm leading.
           </p>
+
           <div className="mt-10">
             <PrimaryCTA className="px-6 py-3">
               Start a Conversation <ArrowRight className="ml-2 size-4" />
