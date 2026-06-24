@@ -24,9 +24,10 @@ const services = [
   {
     n: "01",
     icon: Brain,
-    title: "Fractional CTO",
+    title: "CTO Advisory & Tech Strategy",
     tags: ["Engineering Org Design", "Tech Strategy", "Vendor Negotiation", "Board Reporting"],
   },
+
   {
     n: "02",
     icon: Cloud,
