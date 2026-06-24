@@ -140,8 +140,12 @@ const work = [
 
 const faq = [
   {
+    q: "How does CTO Advisory fit alongside your IT services?",
+    a: "It's the leadership layer on top of the technology we source and run. Where our advisory team designs and procures your UCaaS, network, security, and cloud stack, CTO Advisory provides the executive engineering ownership to set strategy, govern delivery, and turn that stack into outcomes.",
+  },
+  {
     q: "What engagement models do you offer?",
-    a: "Fractional CTO, interim Director of Engineering, and advisory. I step in as a senior leader who owns outcomes — teams, budgets, stakeholder alignment, and execution — at the cadence your business needs.",
+    a: "Advisory, interim Director of Engineering, and embedded CTO leadership. I step in as a senior leader who owns outcomes — teams, budgets, stakeholder alignment, and execution — at the cadence your business needs.",
   },
   {
     q: "How are you different from a typical consultant?",
@@ -160,29 +164,30 @@ const faq = [
 export const Route = createFileRoute("/cto-advisory")({
   head: () => ({
     meta: [
-      { title: "Fractional CTO & Engineering Delivery Leadership — Anand Vidyarthi" },
+      { title: "CTO Advisory — Executive Engineering Leadership | Catalytix" },
       {
         name: "description",
         content:
-          "Anand Vidyarthi — Fractional CTO, Interim Director of Engineering, and AI Transformation Advisor. 20 years building engineering organizations and leading $20M+ delivery portfolios for Fortune 500 clients.",
+          "Catalytix CTO Advisory pairs executive engineering leadership with our IT services — strategy, AI transformation, and delivery governance across your modern technology stack. Led by Anand Vidyarthi.",
       },
       {
         property: "og:title",
-        content: "Fractional CTO & Engineering Delivery Leadership — Anand Vidyarthi",
+        content: "CTO Advisory — Executive Engineering Leadership | Catalytix",
       },
       {
         property: "og:description",
         content:
-          "Senior engineering leadership — fractional, interim, or advisory. AI transformation from strategy to production.",
+          "Executive engineering leadership layered on top of the IT stack we source and run — strategy, AI transformation, and delivery governance.",
       },
     ],
-    links: [{ rel: "canonical", href: "/fractional-cto" }],
+    links: [{ rel: "canonical", href: "/cto-advisory" }],
     scripts: [{ type: "application/ld+json", children: JSON.stringify(faqJsonLd(faq)) }],
   }),
-  component: FractionalCTO,
+  component: CtoAdvisory,
 });
 
-function FractionalCTO() {
+function CtoAdvisory() {
+
   return (
     <div className="min-h-screen bg-paper text-ink">
       <SiteHeader />
