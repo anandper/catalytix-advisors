@@ -11,7 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as InsightsRouteImport } from './routes/insights'
-import { Route as FractionalCtoRouteImport } from './routes/fractional-cto'
+import { Route as CtoAdvisoryRouteImport } from './routes/cto-advisory'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AuditRouteImport } from './routes/audit'
 import { Route as AboutRouteImport } from './routes/about'
@@ -29,9 +29,9 @@ const InsightsRoute = InsightsRouteImport.update({
   path: '/insights',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FractionalCtoRoute = FractionalCtoRouteImport.update({
-  id: '/fractional-cto',
-  path: '/fractional-cto',
+const CtoAdvisoryRoute = CtoAdvisoryRouteImport.update({
+  id: '/cto-advisory',
+  path: '/cto-advisory',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -70,7 +70,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/audit': typeof AuditRoute
   '/contact': typeof ContactRoute
-  '/fractional-cto': typeof FractionalCtoRoute
+  '/cto-advisory': typeof CtoAdvisoryRoute
   '/insights': typeof InsightsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/verticals/$slug': typeof VerticalsSlugRoute
@@ -81,7 +81,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/audit': typeof AuditRoute
   '/contact': typeof ContactRoute
-  '/fractional-cto': typeof FractionalCtoRoute
+  '/cto-advisory': typeof CtoAdvisoryRoute
   '/insights': typeof InsightsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/verticals/$slug': typeof VerticalsSlugRoute
@@ -93,7 +93,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/audit': typeof AuditRoute
   '/contact': typeof ContactRoute
-  '/fractional-cto': typeof FractionalCtoRoute
+  '/cto-advisory': typeof CtoAdvisoryRoute
   '/insights': typeof InsightsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/verticals/$slug': typeof VerticalsSlugRoute
@@ -106,7 +106,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/audit'
     | '/contact'
-    | '/fractional-cto'
+    | '/cto-advisory'
     | '/insights'
     | '/sitemap.xml'
     | '/verticals/$slug'
@@ -117,7 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/audit'
     | '/contact'
-    | '/fractional-cto'
+    | '/cto-advisory'
     | '/insights'
     | '/sitemap.xml'
     | '/verticals/$slug'
@@ -128,7 +128,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/audit'
     | '/contact'
-    | '/fractional-cto'
+    | '/cto-advisory'
     | '/insights'
     | '/sitemap.xml'
     | '/verticals/$slug'
@@ -140,7 +140,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AuditRoute: typeof AuditRoute
   ContactRoute: typeof ContactRoute
-  FractionalCtoRoute: typeof FractionalCtoRoute
+  CtoAdvisoryRoute: typeof CtoAdvisoryRoute
   InsightsRoute: typeof InsightsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   VerticalsSlugRoute: typeof VerticalsSlugRoute
@@ -163,11 +163,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InsightsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/fractional-cto': {
-      id: '/fractional-cto'
-      path: '/fractional-cto'
-      fullPath: '/fractional-cto'
-      preLoaderRoute: typeof FractionalCtoRouteImport
+    '/cto-advisory': {
+      id: '/cto-advisory'
+      path: '/cto-advisory'
+      fullPath: '/cto-advisory'
+      preLoaderRoute: typeof CtoAdvisoryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -220,7 +220,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AuditRoute: AuditRoute,
   ContactRoute: ContactRoute,
-  FractionalCtoRoute: FractionalCtoRoute,
+  CtoAdvisoryRoute: CtoAdvisoryRoute,
   InsightsRoute: InsightsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   VerticalsSlugRoute: VerticalsSlugRoute,

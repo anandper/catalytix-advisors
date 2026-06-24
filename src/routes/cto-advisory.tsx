@@ -24,9 +24,10 @@ const services = [
   {
     n: "01",
     icon: Brain,
-    title: "Fractional CTO",
+    title: "CTO Advisory & Tech Strategy",
     tags: ["Engineering Org Design", "Tech Strategy", "Vendor Negotiation", "Board Reporting"],
   },
+
   {
     n: "02",
     icon: Cloud,
@@ -139,8 +140,12 @@ const work = [
 
 const faq = [
   {
+    q: "How does CTO Advisory fit alongside your IT services?",
+    a: "It's the leadership layer on top of the technology we source and run. Where our advisory team designs and procures your UCaaS, network, security, and cloud stack, CTO Advisory provides the executive engineering ownership to set strategy, govern delivery, and turn that stack into outcomes.",
+  },
+  {
     q: "What engagement models do you offer?",
-    a: "Fractional CTO, interim Director of Engineering, and advisory. I step in as a senior leader who owns outcomes — teams, budgets, stakeholder alignment, and execution — at the cadence your business needs.",
+    a: "Advisory, interim Director of Engineering, and embedded CTO leadership. I step in as a senior leader who owns outcomes — teams, budgets, stakeholder alignment, and execution — at the cadence your business needs.",
   },
   {
     q: "How are you different from a typical consultant?",
@@ -156,32 +161,33 @@ const faq = [
   },
 ];
 
-export const Route = createFileRoute("/fractional-cto")({
+export const Route = createFileRoute("/cto-advisory")({
   head: () => ({
     meta: [
-      { title: "Fractional CTO & Engineering Delivery Leadership — Anand Vidyarthi" },
+      { title: "CTO Advisory — Executive Engineering Leadership | Catalytix" },
       {
         name: "description",
         content:
-          "Anand Vidyarthi — Fractional CTO, Interim Director of Engineering, and AI Transformation Advisor. 20 years building engineering organizations and leading $20M+ delivery portfolios for Fortune 500 clients.",
+          "Catalytix CTO Advisory pairs executive engineering leadership with our IT services — strategy, AI transformation, and delivery governance across your modern technology stack. Led by Anand Vidyarthi.",
       },
       {
         property: "og:title",
-        content: "Fractional CTO & Engineering Delivery Leadership — Anand Vidyarthi",
+        content: "CTO Advisory — Executive Engineering Leadership | Catalytix",
       },
       {
         property: "og:description",
         content:
-          "Senior engineering leadership — fractional, interim, or advisory. AI transformation from strategy to production.",
+          "Executive engineering leadership layered on top of the IT stack we source and run — strategy, AI transformation, and delivery governance.",
       },
     ],
-    links: [{ rel: "canonical", href: "/fractional-cto" }],
+    links: [{ rel: "canonical", href: "/cto-advisory" }],
     scripts: [{ type: "application/ld+json", children: JSON.stringify(faqJsonLd(faq)) }],
   }),
-  component: FractionalCTO,
+  component: CtoAdvisory,
 });
 
-function FractionalCTO() {
+function CtoAdvisory() {
+
   return (
     <div className="min-h-screen bg-paper text-ink">
       <SiteHeader />
@@ -194,17 +200,21 @@ function FractionalCTO() {
         />
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 lg:pt-28">
           <div className="mb-5 text-xs font-semibold uppercase tracking-wider text-tobacco">
-            Fractional CTO · Engineering Delivery Leader
+            CTO Advisory · Catalytix
           </div>
           <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-balance md:text-5xl lg:text-6xl">
-            Anand Vidyarthi
+            Executive engineering leadership for your{" "}
+            <span className="text-tobacco">modern IT stack</span>.
           </h1>
-          <p className="mt-4 max-w-2xl text-lg font-medium text-ink/80">
-            Fractional CTO · Interim Director of Engineering · AI Transformation Advisor · Delivery
-            Leader
+          <p className="mt-6 max-w-2xl text-lg font-medium text-ink/80">
+            CTO Advisory is the leadership layer on top of the technology we source and run.
+            We set the strategy, govern delivery, and turn UCaaS, network, security, and cloud
+            into measurable business outcomes.
           </p>
-          <p className="mt-1 text-sm text-ink/55">Placentia, CA · Available Nationwide</p>
-          <p className="mt-8 max-w-2xl text-xl font-medium text-balance">
+          <p className="mt-8 max-w-2xl text-sm font-semibold uppercase tracking-wider text-ink/55">
+            Led by Anand Vidyarthi · Placentia, CA · Available Nationwide
+          </p>
+          <p className="mt-3 max-w-2xl text-xl font-medium text-balance">
             I build and lead delivery organizations — and I'm still close enough to the work to know
             when something's wrong.
           </p>
@@ -215,6 +225,7 @@ function FractionalCTO() {
             haven't lost the technical depth. I can go deep when it matters, which means I ask better
             questions, make faster decisions, and don't get misled by the teams I'm leading.
           </p>
+
           <div className="mt-10">
             <PrimaryCTA className="px-6 py-3">
               Start a Conversation <ArrowRight className="ml-2 size-4" />
