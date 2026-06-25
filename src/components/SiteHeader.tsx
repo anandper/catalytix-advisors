@@ -5,7 +5,7 @@ import catalytixLogo from "@/assets/catalytix-logo.jpg.asset.json";
 
 const nav = [
   { to: "/audit", label: "Services" },
-  { to: "/cto-advisory", label: "CTO Advisory" },
+  { to: "/modern-it-advisory", label: "Modern IT Advisory" },
   { to: "/verticals/dental", label: "Industries" },
   { to: "/insights", label: "Insights" },
   { to: "/about", label: "About" },

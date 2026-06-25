@@ -10,8 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ModernItAdvisoryRouteImport } from './routes/modern-it-advisory'
 import { Route as InsightsRouteImport } from './routes/insights'
-import { Route as CtoAdvisoryRouteImport } from './routes/cto-advisory'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AuditRouteImport } from './routes/audit'
 import { Route as AboutRouteImport } from './routes/about'
@@ -24,14 +24,14 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ModernItAdvisoryRoute = ModernItAdvisoryRouteImport.update({
+  id: '/modern-it-advisory',
+  path: '/modern-it-advisory',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InsightsRoute = InsightsRouteImport.update({
   id: '/insights',
   path: '/insights',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CtoAdvisoryRoute = CtoAdvisoryRouteImport.update({
-  id: '/cto-advisory',
-  path: '/cto-advisory',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -70,8 +70,8 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/audit': typeof AuditRoute
   '/contact': typeof ContactRoute
-  '/cto-advisory': typeof CtoAdvisoryRoute
   '/insights': typeof InsightsRoute
+  '/modern-it-advisory': typeof ModernItAdvisoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/verticals/$slug': typeof VerticalsSlugRoute
   '/verticals/gas-stations': typeof VerticalsGasStationsRoute
@@ -81,8 +81,8 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/audit': typeof AuditRoute
   '/contact': typeof ContactRoute
-  '/cto-advisory': typeof CtoAdvisoryRoute
   '/insights': typeof InsightsRoute
+  '/modern-it-advisory': typeof ModernItAdvisoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/verticals/$slug': typeof VerticalsSlugRoute
   '/verticals/gas-stations': typeof VerticalsGasStationsRoute
@@ -93,8 +93,8 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/audit': typeof AuditRoute
   '/contact': typeof ContactRoute
-  '/cto-advisory': typeof CtoAdvisoryRoute
   '/insights': typeof InsightsRoute
+  '/modern-it-advisory': typeof ModernItAdvisoryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/verticals/$slug': typeof VerticalsSlugRoute
   '/verticals/gas-stations': typeof VerticalsGasStationsRoute
@@ -106,8 +106,8 @@ export interface FileRouteTypes {
     | '/about'
     | '/audit'
     | '/contact'
-    | '/cto-advisory'
     | '/insights'
+    | '/modern-it-advisory'
     | '/sitemap.xml'
     | '/verticals/$slug'
     | '/verticals/gas-stations'
@@ -117,8 +117,8 @@ export interface FileRouteTypes {
     | '/about'
     | '/audit'
     | '/contact'
-    | '/cto-advisory'
     | '/insights'
+    | '/modern-it-advisory'
     | '/sitemap.xml'
     | '/verticals/$slug'
     | '/verticals/gas-stations'
@@ -128,8 +128,8 @@ export interface FileRouteTypes {
     | '/about'
     | '/audit'
     | '/contact'
-    | '/cto-advisory'
     | '/insights'
+    | '/modern-it-advisory'
     | '/sitemap.xml'
     | '/verticals/$slug'
     | '/verticals/gas-stations'
@@ -140,8 +140,8 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AuditRoute: typeof AuditRoute
   ContactRoute: typeof ContactRoute
-  CtoAdvisoryRoute: typeof CtoAdvisoryRoute
   InsightsRoute: typeof InsightsRoute
+  ModernItAdvisoryRoute: typeof ModernItAdvisoryRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   VerticalsSlugRoute: typeof VerticalsSlugRoute
   VerticalsGasStationsRoute: typeof VerticalsGasStationsRoute
@@ -156,18 +156,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/modern-it-advisory': {
+      id: '/modern-it-advisory'
+      path: '/modern-it-advisory'
+      fullPath: '/modern-it-advisory'
+      preLoaderRoute: typeof ModernItAdvisoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/insights': {
       id: '/insights'
       path: '/insights'
       fullPath: '/insights'
       preLoaderRoute: typeof InsightsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cto-advisory': {
-      id: '/cto-advisory'
-      path: '/cto-advisory'
-      fullPath: '/cto-advisory'
-      preLoaderRoute: typeof CtoAdvisoryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -220,8 +220,8 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AuditRoute: AuditRoute,
   ContactRoute: ContactRoute,
-  CtoAdvisoryRoute: CtoAdvisoryRoute,
   InsightsRoute: InsightsRoute,
+  ModernItAdvisoryRoute: ModernItAdvisoryRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   VerticalsSlugRoute: VerticalsSlugRoute,
   VerticalsGasStationsRoute: VerticalsGasStationsRoute,
