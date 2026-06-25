@@ -14,20 +14,19 @@ import { PrimaryCTA } from "@/components/PrimaryCTA";
 import { FaqList, faqJsonLd } from "@/components/JsonLd";
 
 const stats = [
+  { v: "20+", l: "Years enterprise software & delivery leadership" },
   { v: "$20M+", l: "Annual delivery portfolio managed" },
   { v: "120+", l: "Engineers led across concurrent engagements" },
-  { v: "20yr", l: "Enterprise software leadership" },
-  { v: "F500", l: "FinServ · Insurance · Life Sciences · Mfg" },
+  { v: "F500", l: "FinServ · Insurance · Life Sciences · Manufacturing" },
 ];
 
 const services = [
   {
     n: "01",
     icon: Brain,
-    title: "CTO Advisory & Tech Strategy",
+    title: "Technology Strategy & Advisory",
     tags: ["Engineering Org Design", "Tech Strategy", "Vendor Negotiation", "Board Reporting"],
   },
-
   {
     n: "02",
     icon: Cloud,
@@ -75,7 +74,7 @@ const aiPractice = [
     n: "02",
     title: "AI-Driven SDLC & QA Transformation",
     items: [
-      "AI-powered requirements & user story generation (Amazon Kiro)",
+      "AI-powered requirements & user story generation",
       "AI-powered QA test case generation",
       "Agentic project status reporting — automated weekly compilation",
       "AI-powered engineering team metrics dashboard",
@@ -88,7 +87,7 @@ const aiPractice = [
       "LLM selection: Claude, Gemini — use-case matched",
       "Build vs. buy vs. fine-tune analysis",
       "Responsible AI governance and policy alignment",
-      "IAPP AI Governance Professional (in progress)",
+      "IAPP AI Governance Professional alignment",
     ],
   },
   {
@@ -104,7 +103,7 @@ const aiPractice = [
 ];
 
 const built = [
-  "AI Requirements & User Story Generator (Amazon Kiro)",
+  "AI Requirements & User Story Generator",
   "QA Test Case Generator",
   "Agentic PM Status Report Workflow",
   "Engineering Metrics Dashboard",
@@ -140,39 +139,39 @@ const work = [
 
 const faq = [
   {
-    q: "How does CTO Advisory fit alongside your IT services?",
-    a: "It's the leadership layer on top of the technology we source and run. Where our advisory team designs and procures your UCaaS, network, security, and cloud stack, CTO Advisory provides the executive engineering ownership to set strategy, govern delivery, and turn that stack into outcomes.",
+    q: "How does Modern IT Advisory fit alongside your IT services?",
+    a: "It's the leadership layer on top of the technology we source and run. Where our advisory team designs and procures your UCaaS, network, security, and cloud stack, Modern IT Advisory provides the executive engineering ownership to set strategy, govern delivery, and turn that stack into outcomes.",
   },
   {
     q: "What engagement models do you offer?",
-    a: "Advisory, interim Director of Engineering, and embedded CTO leadership. I step in as a senior leader who owns outcomes — teams, budgets, stakeholder alignment, and execution — at the cadence your business needs.",
+    a: "Advisory, interim Director of Engineering, and embedded technology leadership. We step in as a senior leadership team that owns outcomes — teams, budgets, stakeholder alignment, and execution — at the cadence your business needs.",
   },
   {
-    q: "How are you different from a typical consultant?",
-    a: "I haven't lost the technical depth. I can go deep when it matters, which means I ask better questions, make faster decisions, and don't get misled by the teams I'm leading. You work directly with me — no handoffs, no junior substitution.",
+    q: "How is this different from a typical consultant?",
+    a: "We don't leave the technical depth behind. Our advisory team can go deep when it matters, which means we ask better questions, make faster decisions, and aren't misled by the delivery teams we lead. You work directly with our principals — no handoffs, no junior substitution.",
   },
   {
     q: "Can you take AI initiatives to production?",
-    a: "Yes. Most AI initiatives stall between pilot and production. I've led the full journey — architecture, team enablement, governance, and deployment — and I build and prototype hands-on with the delivery infrastructure to scale it across an enterprise.",
+    a: "Yes. Most AI initiatives stall between pilot and production. We have led the full journey — architecture, team enablement, governance, and deployment — and we build and prototype hands-on with the delivery infrastructure to scale it across an enterprise.",
   },
   {
     q: "What industries do you know best?",
-    a: "Fortune 500 organizations across Financial Services, Insurance, Life Sciences, Manufacturing, and Retail — including regulated delivery environments with HL7/FHIR, mortgage, and FinServ compliance requirements.",
+    a: "Fortune 500 and mid-market organizations across Financial Services, Insurance, Life Sciences, Manufacturing, and Retail — including regulated delivery environments with HL7/FHIR, mortgage, and FinServ compliance requirements.",
   },
 ];
 
-export const Route = createFileRoute("/cto-advisory")({
+export const Route = createFileRoute("/modern-it-advisory")({
   head: () => ({
     meta: [
-      { title: "CTO Advisory — Executive Engineering Leadership | Catalytix" },
+      { title: "Modern IT Advisory — Executive Engineering Leadership | Catalytix" },
       {
         name: "description",
         content:
-          "Catalytix CTO Advisory pairs executive engineering leadership with our IT services — strategy, AI transformation, and delivery governance across your modern technology stack. Led by Anand Vidyarthi.",
+          "Catalytix Modern IT Advisory pairs executive engineering leadership with our IT services — strategy, AI transformation, and delivery governance across your modern technology stack.",
       },
       {
         property: "og:title",
-        content: "CTO Advisory — Executive Engineering Leadership | Catalytix",
+        content: "Modern IT Advisory — Executive Engineering Leadership | Catalytix",
       },
       {
         property: "og:description",
@@ -180,14 +179,13 @@ export const Route = createFileRoute("/cto-advisory")({
           "Executive engineering leadership layered on top of the IT stack we source and run — strategy, AI transformation, and delivery governance.",
       },
     ],
-    links: [{ rel: "canonical", href: "/cto-advisory" }],
+    links: [{ rel: "canonical", href: "/modern-it-advisory" }],
     scripts: [{ type: "application/ld+json", children: JSON.stringify(faqJsonLd(faq)) }],
   }),
-  component: CtoAdvisory,
+  component: ModernItAdvisory,
 });
 
-function CtoAdvisory() {
-
+function ModernItAdvisory() {
   return (
     <div className="min-h-screen bg-paper text-ink">
       <SiteHeader />
@@ -200,30 +198,21 @@ function CtoAdvisory() {
         />
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 lg:pt-28">
           <div className="mb-5 text-xs font-semibold uppercase tracking-wider text-tobacco">
-            CTO Advisory · Catalytix
+            Modern IT Advisory · Catalytix
           </div>
           <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-balance md:text-5xl lg:text-6xl">
-            Executive engineering leadership for your{" "}
-            <span className="text-tobacco">modern IT stack</span>.
+            The leadership layer on top of the technology we source and run.
           </h1>
           <p className="mt-6 max-w-2xl text-lg font-medium text-ink/80">
-            CTO Advisory is the leadership layer on top of the technology we source and run.
-            We set the strategy, govern delivery, and turn UCaaS, network, security, and cloud
-            into measurable business outcomes.
-          </p>
-          <p className="mt-8 max-w-2xl text-sm font-semibold uppercase tracking-wider text-ink/55">
-            Led by Anand Vidyarthi · Placentia, CA · Available Nationwide
-          </p>
-          <p className="mt-3 max-w-2xl text-xl font-medium text-balance">
-            I build and lead delivery organizations — and I'm still close enough to the work to know
-            when something's wrong.
+            Modern IT Advisory is the executive engineering partnership that sits above your
+            UCaaS, network, security, and cloud stack. We set strategy, govern delivery, and turn
+            technology investments into measurable business outcomes.
           </p>
           <p className="mt-6 max-w-2xl text-lg text-ink/70 text-pretty">
-            Twenty years building engineering organizations, managing $20M+ delivery portfolios, and
-            holding P&L accountability for Fortune 500 clients. I step in as a senior leader who owns
-            outcomes — teams, budgets, stakeholder alignment, and execution. What's different: I
-            haven't lost the technical depth. I can go deep when it matters, which means I ask better
-            questions, make faster decisions, and don't get misled by the teams I'm leading.
+            Our advisory team designs and procures your modern IT infrastructure, then provides the
+            senior leadership to make it perform. That means P&L accountability, architecture
+            oversight, AI transformation, and delivery governance — without the overhead of a
+            full-time executive bench.
           </p>
 
           <div className="mt-10">
@@ -244,18 +233,18 @@ function CtoAdvisory() {
         </div>
       </section>
 
-      {/* What I do */}
+      {/* What we do */}
       <section className="border-t border-rule bg-surface">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:py-24">
           <div className="mb-12">
             <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-tobacco">
-              What I do
+              What we do
             </div>
             <h2 className="max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
               Senior-level leadership across the full delivery lifecycle.
             </h2>
             <p className="mt-4 max-w-2xl text-ink/65">
-              I work directly with you — no handoffs, no junior substitution, no methodology theater.
+              We work alongside your team — no handoffs, no junior substitution, no methodology theater.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -297,9 +286,9 @@ function CtoAdvisory() {
             Strategy to production — not just the slide.
           </h2>
           <p className="mt-4 max-w-2xl text-ink/65">
-            Most AI initiatives stall between pilot and production. I've led the full journey —
-            architecture, team enablement, governance, and deployment. I build and prototype
-            hands-on, and I have the delivery infrastructure to scale it across an enterprise.
+            Most AI initiatives stall between pilot and production. We have led the full journey —
+            architecture, team enablement, governance, and deployment. We build and prototype
+            hands-on, and we have the delivery infrastructure to scale AI across an enterprise.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
@@ -343,11 +332,10 @@ function CtoAdvisory() {
               Selected work
             </div>
             <h2 className="max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
-              Outcomes from delivery experience.
+              Outcomes from our delivery experience.
             </h2>
             <p className="mt-4 max-w-2xl text-paper/60">
-              Client names withheld per confidentiality. Direct delivery track record — not firm
-              history.
+              Client names withheld per confidentiality. Direct delivery track record — not firm history.
             </p>
           </div>
           <div className="grid gap-px bg-paper/10 sm:grid-cols-2">
@@ -381,11 +369,11 @@ function CtoAdvisory() {
             Let's work together
           </div>
           <h3 className="mx-auto max-w-xl text-2xl font-semibold tracking-tight md:text-3xl">
-            Looking for senior engineering leadership — fractional, interim, or advisory?
+            Looking for senior engineering leadership to guide your modern IT stack?
           </h3>
           <p className="mx-auto mt-3 max-w-xl text-ink/65">
-            Tell me the problem. I'll tell you honestly whether I'm the right fit — and if so,
-            exactly how I'd approach it. No pitch deck. No follow-up from someone you haven't met.
+            Tell us the problem. We'll be direct about whether we're the right fit — and if so,
+            exactly how we'd approach it. No pitch deck. No follow-up from someone you haven't met.
           </p>
           <div className="mt-6">
             <PrimaryCTA className="px-6 py-3">Start a Conversation</PrimaryCTA>
